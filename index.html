@@ -11,11 +11,11 @@
         background-image: url("R.jpg");
         background-size: cover;
         color: black;
-        margin-left: 35%;
+        /* margin-left: 35%; */
         font-family: 'Times New Roman', Times, serif;
     } 
     h1{
-        margin-left: 9%;
+        /* margin-left: 9%; */
         margin-top: 5%;
     }
     .row{
@@ -29,55 +29,49 @@
         content: "*";
         color: red;
     }
-    .alert {
+    /* .alert {
         width: 50%;
-    }
+    } */
 </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <body>
-    <h1> Admission Form </h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <label for="name" class="form-label" >Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter Full Name" autocomplete="off">
-            </div>
+    <div class="row">
+        <h1 style="text-align: center;"> Admission Form </h1>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="container">
+                    <div class="col-mb-3">
+                        <label for="name" class="form-label" >Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Full Name" autocomplete="off">
+                    </div>
+                    <div class="col-mb-3">
+                        <label for="DOB" class="form-label" >Date Of Birth</label>
+                        <input type="text" class="form-control" id="DOB" placeholder="Enter DOB"autocomplete="off">
+                    </div>
+                    <div class="col-mb-3">
+                        <label for="courseName" class="form-label" >Course Name</label>
+                        <input type="text" class="form-control" id="courseName" placeholder="Enter Course Name" autocomplete="off">
+                    </div>
+                    <div class="col-mb-3">
+                        <label for="email" class="form-label" >Email Id</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email Id" autocomplete="off">
+                    </div>
+                    <div class="col-mb-3">
+                        <label for="address" class="form-label" >Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address" autocomplete="off">
+                    </div>
+                    <br>
+                    <div class="col-mb-3">
+                        <button type="button" class="btn btn-outline-dark" onclick="fillTheInfo()">SUBMIT</button> 
+                    </div>
+                </div>
+                <br>
+                <div class="alert alert-danger" role="alert" id="alert" style="display: none;">
+                    <p id="information"></p>
+                </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="DOB" class="form-label" >Date Of Birth</label>
-                <input type="text" class="form-control" id="DOB" placeholder="Enter DOB"autocomplete="off">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="courseName" class="form-label" >Course Name</label>
-                <input type="text" class="form-control" id="courseName" placeholder="Enter Course Name" autocomplete="off">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="email" class="form-label" >Email Id</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email Id" autocomplete="off">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="address" class="form-label" >Address</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter Address" autocomplete="off">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-               <button type="button" class="btn btn-outline-dark" onclick="fillTheInfo()">SUBMIT</button>
-            </div>
-        </div>
+        <div class="col-md-4"></div>
     </div>
-    <br>
-    <br>
-    <div class="alert alert-danger" role="alert" id="alert" style="display: none;">
-       <p id="information"></p>
-      </div>   
 </body>
 <script>
     function fillTheInfo(){
